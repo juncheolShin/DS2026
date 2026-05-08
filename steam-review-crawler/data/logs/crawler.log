@@ -1,0 +1,44 @@
+2026-05-08 15:03:24 INFO [steam_review_crawler] loading target appids
+2026-05-08 15:03:24 INFO [steam_review_crawler] loaded 5 target appids
+2026-05-08 15:03:24 INFO [steam_review_crawler] review language=koreana filter=recent max_reviews_per_app=200
+2026-05-08 15:03:59 INFO [steam_review_crawler] appid=413150 collected=200 termination=max_reviews_per_app
+2026-05-08 15:04:01 INFO [steam_review_crawler] appid=1245620 collected=200 termination=max_reviews_per_app
+2026-05-08 15:04:03 INFO [steam_review_crawler] appid=367520 collected=200 termination=max_reviews_per_app
+2026-05-08 15:04:05 INFO [steam_review_crawler] appid=578080 collected=200 termination=max_reviews_per_app
+2026-05-08 15:04:07 INFO [steam_review_crawler] appid=730 collected=200 termination=max_reviews_per_app
+2026-05-08 15:04:10 INFO [steam_review_crawler] saved parquet: 1000 rows=1000 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.parquet
+2026-05-08 15:04:10 INFO [steam_review_crawler] saved csv: rows=1000 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.csv
+2026-05-08 15:04:11 INFO [steam_review_crawler] saved parquet: 5 rows=5 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.parquet
+2026-05-08 15:04:11 INFO [steam_review_crawler] saved csv: rows=5 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.csv
+2026-05-08 15:04:11 INFO [steam_review_crawler] saved parquet: 5 rows=5 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.parquet
+2026-05-08 15:04:11 INFO [steam_review_crawler] saved csv: rows=5 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.csv
+2026-05-08 15:04:11 INFO [steam_review_crawler] saved failed appids csv: rows=0 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\logs\failed_appids.csv
+2026-05-08 15:04:11 INFO [steam_review_crawler] collection complete
+2026-05-08 15:04:11 INFO [steam_review_crawler] reviews_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.parquet
+2026-05-08 15:04:11 INFO [steam_review_crawler] summary_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.parquet
+2026-05-08 15:04:11 INFO [steam_review_crawler] metadata_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.parquet
+2026-05-08 15:04:11 INFO [steam_review_crawler] failed_appids_csv: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\logs\failed_appids.csv
+2026-05-08 15:06:09 INFO [steam_review_crawler] loading target appids
+2026-05-08 15:06:09 INFO [steam_review_crawler] loaded 5 target appids
+2026-05-08 15:06:09 INFO [steam_review_crawler] review language=koreana filter=recent max_reviews_per_app=200
+2026-05-08 15:07:07 WARNING [steam_review_crawler] appdetails appid=413150 request error on attempt 1/3: HTTPSConnectionPool(host='store.steampowered.com', port=443): Max retries exceeded with url: /api/appdetails?appids=413150&cc=kr&l=korean (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))); sleeping 1.08s
+2026-05-08 15:07:56 WARNING [steam_review_crawler] appdetails appid=413150 request error on attempt 2/3: HTTPSConnectionPool(host='store.steampowered.com', port=443): Max retries exceeded with url: /api/appdetails?appids=413150&cc=kr&l=korean (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))); sleeping 2.17s
+2026-05-08 15:08:59 WARNING [steam_review_crawler] metadata failed for appid=413150 (Stardew Valley): appdetails appid=413150 failed after 3 attempts: HTTPSConnectionPool(host='store.steampowered.com', port=443): Max retries exceeded with url: /api/appdetails?appids=413150&cc=kr&l=korean (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))
+2026-05-08 15:09:36 WARNING [steam_review_crawler] appdetails appid=1245620 request error on attempt 1/3: HTTPSConnectionPool(host='store.steampowered.com', port=443): Max retries exceeded with url: /api/appdetails?appids=1245620&cc=kr&l=korean (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))); sleeping 1.22s
+2026-05-08 15:10:12 INFO [steam_review_crawler] appid=413150 collected=200 termination=max_reviews_per_app
+2026-05-08 15:10:14 INFO [steam_review_crawler] appid=1245620 collected=200 termination=max_reviews_per_app
+2026-05-08 15:10:16 INFO [steam_review_crawler] appid=367520 collected=200 termination=max_reviews_per_app
+2026-05-08 15:10:17 INFO [steam_review_crawler] appid=578080 collected=200 termination=max_reviews_per_app
+2026-05-08 15:10:19 INFO [steam_review_crawler] appid=730 collected=200 termination=max_reviews_per_app
+2026-05-08 15:10:20 INFO [steam_review_crawler] saved parquet: rows=1000 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.parquet
+2026-05-08 15:10:20 INFO [steam_review_crawler] saved csv: rows=1000 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.csv
+2026-05-08 15:10:20 INFO [steam_review_crawler] saved parquet: rows=5 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.parquet
+2026-05-08 15:10:20 INFO [steam_review_crawler] saved csv: rows=5 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.csv
+2026-05-08 15:10:20 INFO [steam_review_crawler] saved parquet: rows=5 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.parquet
+2026-05-08 15:10:20 INFO [steam_review_crawler] saved csv: rows=5 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.csv
+2026-05-08 15:10:20 INFO [steam_review_crawler] saved failed appids csv: rows=0 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\logs\failed_appids.csv
+2026-05-08 15:10:20 INFO [steam_review_crawler] collection complete
+2026-05-08 15:10:20 INFO [steam_review_crawler] reviews_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.parquet
+2026-05-08 15:10:20 INFO [steam_review_crawler] summary_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.parquet
+2026-05-08 15:10:20 INFO [steam_review_crawler] metadata_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.parquet
+2026-05-08 15:10:20 INFO [steam_review_crawler] failed_appids_csv: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\logs\failed_appids.csv

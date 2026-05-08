@@ -1,0 +1,66 @@
+env_file: .env
+
+paths:
+  appids_csv: data/input/appids.csv
+  raw_dir: data/raw
+  logs_dir: data/logs
+  reviews_raw_parquet: data/raw/reviews_raw.parquet
+  review_summary_parquet: data/raw/review_summary_by_app.parquet
+  app_metadata_parquet: data/raw/app_metadata.parquet
+  failed_appids_csv: data/logs/failed_appids.csv
+
+crawler:
+  review_endpoint: https://store.steampowered.com/appreviews/{appid}
+  language: koreana
+  filter: recent
+  review_type: all
+  purchase_type: all
+  num_per_page: 100
+  filter_offtopic_activity: 1
+  max_reviews_per_app: 200
+  max_failures: 3
+  sleep_sec: 1.0
+  timeout_sec: 20
+  user_agent: steam-review-crawler/0.1 (academic data science project)
+  retry:
+    max_attempts: 5
+    backoff_initial_sec: 1.0
+    backoff_multiplier: 2.0
+    backoff_max_sec: 30.0
+    jitter_sec: 0.25
+    status_forcelist: [429, 500, 502, 503, 504]
+
+test_mode:
+  max_reviews_per_app: 200
+
+metadata:
+  enabled: true
+  appdetails_endpoint: https://store.steampowered.com/api/appdetails
+  cc: kr
+  language: korean
+  sleep_sec: 0.5
+  timeout_sec: 20
+  retry:
+    max_attempts: 3
+    backoff_initial_sec: 1.0
+    backoff_multiplier: 2.0
+    backoff_max_sec: 10.0
+    jitter_sec: 0.25
+    status_forcelist: [429, 500, 502, 503, 504]
+
+app_list:
+  endpoint: https://api.steampowered.com/ISteamApps/GetAppList/v2/
+  timeout_sec: 30
+  retry:
+    max_attempts: 3
+    backoff_initial_sec: 1.0
+    backoff_multiplier: 2.0
+    backoff_max_sec: 20.0
+    jitter_sec: 0.25
+    status_forcelist: [429, 500, 502, 503, 504]
+
+output:
+  save_csv: true
+  save_parquet: true
+  privacy_hash_salt_env: STEAM_REVIEW_HASH_SALT
+  hash_salt: ""

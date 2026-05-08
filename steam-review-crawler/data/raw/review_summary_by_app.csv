@@ -1,0 +1,6 @@
+﻿appid,game_name,total_reviews_api,total_positive_api,total_negative_api,review_score,review_score_desc,collected_reviews_count,positive_collected_count,negative_collected_count,first_review_time,last_review_time,crawled_at,termination_reason
+413150,Stardew Valley,,,,,,200,196,4,1775820002,1778202370,2026-05-08T06:10:10+00:00,max_reviews_per_app
+1245620,ELDEN RING,,,,,,200,189,11,1774880452,1778218254,2026-05-08T06:10:12+00:00,max_reviews_per_app
+367520,Hollow Knight,,,,,,200,189,11,1771646183,1778163250,2026-05-08T06:10:14+00:00,max_reviews_per_app
+578080,PUBG: BATTLEGROUNDS,,,,,,200,168,32,1777650101,1778216036,2026-05-08T06:10:16+00:00,max_reviews_per_app
+730,Counter-Strike 2,,,,,,200,147,53,1774769718,1778151753,2026-05-08T06:10:17+00:00,max_reviews_per_app
