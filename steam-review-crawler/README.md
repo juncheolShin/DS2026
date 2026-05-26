@@ -18,7 +18,7 @@ pip install -r requirements.txt
 - `crawler.language`: `koreana` 또는 `all`을 사용할 수 있습니다. 기본값은 한국어 리뷰용 `koreana`입니다.
 - `crawler.filter`: 기본값은 `recent`입니다. `all`은 helpfulness 기반 sliding window 때문에 전체 순회 종료 조건이 애매할 수 있어 기본값으로 두지 않았습니다.
 - `crawler.num_per_page`: Steam 리뷰 API 페이지당 요청 수입니다. 최대 100으로 제한됩니다.
-- `crawler.max_reviews_per_app`: 게임당 최대 수집 리뷰 수입니다. 기본 설정은 테스트 모드 기준 200개입니다.
+- `crawler.max_reviews_per_app`: 게임당 최대 수집 리뷰 수입니다. 기본 설정은 학습용 수집 기준 1,000개입니다.
 - `crawler.sleep_sec`: 페이지 요청 사이 대기 시간입니다.
 - `crawler.max_failures`: 한 appid에서 연속 실패가 이 값을 초과하면 수집을 종료합니다.
 - `crawler.retry.status_forcelist`: `429, 500, 502, 503, 504`가 retry 대상입니다. `403`은 즉시 중단됩니다.

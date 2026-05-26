@@ -1,6 +1,16 @@
 ﻿appid,game_name,total_reviews_api,total_positive_api,total_negative_api,review_score,review_score_desc,collected_reviews_count,positive_collected_count,negative_collected_count,first_review_time,last_review_time,crawled_at,termination_reason
-413150,Stardew Valley,,,,,,200,196,4,1775820002,1778202370,2026-05-08T06:10:10+00:00,max_reviews_per_app
-1245620,ELDEN RING,,,,,,200,189,11,1774880452,1778218254,2026-05-08T06:10:12+00:00,max_reviews_per_app
-367520,Hollow Knight,,,,,,200,189,11,1771646183,1778163250,2026-05-08T06:10:14+00:00,max_reviews_per_app
-578080,PUBG: BATTLEGROUNDS,,,,,,200,168,32,1777650101,1778216036,2026-05-08T06:10:16+00:00,max_reviews_per_app
-730,Counter-Strike 2,,,,,,200,147,53,1774769718,1778151753,2026-05-08T06:10:17+00:00,max_reviews_per_app
+730,Counter-Strike 2,,,,,,1000,808,192,1761998294,1779739756,2026-05-26T07:39:52+00:00,max_reviews_per_app
+570,Dota 2,,,,,,1000,732,268,1639223554,1779668112,2026-05-26T07:40:06+00:00,max_reviews_per_app
+578080,PUBG: BATTLEGROUNDS,,,,,,1000,820,180,1776948712,1779726458,2026-05-26T07:40:19+00:00,max_reviews_per_app
+2483190,Forza Horizon 6,,,,,,763,640,123,1778817826,1779770853,2026-05-26T07:40:34+00:00,no_reviews
+2868840,Slay the Spire 2,,,,,,1000,753,247,1775635321,1777997848,2026-05-26T07:40:44+00:00,max_reviews_per_app
+252490,Rust,,,,,,1000,780,220,1710938132,1779630373,2026-05-26T07:40:59+00:00,max_reviews_per_app
+413150,Stardew Valley,,,,,,1000,978,22,1770201833,1779751827,2026-05-26T07:41:12+00:00,max_reviews_per_app
+552990,World of Warships,,,,,,1000,803,197,1643180001,1779562884,2026-05-26T07:41:26+00:00,max_reviews_per_app
+2767030,Marvel Rivals,,,,,,1000,703,297,1737460695,1779717258,2026-05-26T07:41:39+00:00,max_reviews_per_app
+1086940,Baldur's Gate 3,,,,,,1000,932,68,1764591550,1779743337,2026-05-26T07:41:53+00:00,max_reviews_per_app
+1245620,ELDEN RING,,,,,,1000,921,79,1767109492,1779735329,2026-05-26T07:42:07+00:00,max_reviews_per_app
+289070,Sid Meier's Civilization VI,,,,,,1000,928,72,1744465483,1779740812,2026-05-26T07:42:21+00:00,max_reviews_per_app
+294100,RimWorld,,,,,,1000,979,21,1759480270,1779730168,2026-05-26T07:42:35+00:00,max_reviews_per_app
+227300,Euro Truck Simulator 2,,,,,,1000,965,35,1742458628,1779715449,2026-05-26T07:42:49+00:00,max_reviews_per_app
+381210,Dead by Daylight,,,,,,1000,669,331,1761823713,1779752608,2026-05-26T07:43:03+00:00,max_reviews_per_app

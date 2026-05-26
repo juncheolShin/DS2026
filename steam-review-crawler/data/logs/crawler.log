@@ -42,3 +42,33 @@
 2026-05-08 15:10:20 INFO [steam_review_crawler] summary_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.parquet
 2026-05-08 15:10:20 INFO [steam_review_crawler] metadata_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.parquet
 2026-05-08 15:10:20 INFO [steam_review_crawler] failed_appids_csv: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\logs\failed_appids.csv
+2026-05-26 16:39:07 INFO [steam_review_crawler] loading target appids
+2026-05-26 16:39:07 INFO [steam_review_crawler] loaded 15 target appids
+2026-05-26 16:39:07 INFO [steam_review_crawler] review language=koreana filter=recent max_reviews_per_app=1000
+2026-05-26 16:40:06 INFO [steam_review_crawler] appid=730 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:40:19 INFO [steam_review_crawler] appid=570 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:40:34 INFO [steam_review_crawler] appid=578080 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:40:44 INFO [steam_review_crawler] appid=2483190 collected=763 termination=no_reviews
+2026-05-26 16:40:59 INFO [steam_review_crawler] appid=2868840 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:41:12 INFO [steam_review_crawler] appid=252490 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:41:26 INFO [steam_review_crawler] appid=413150 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:41:39 INFO [steam_review_crawler] appid=552990 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:41:53 INFO [steam_review_crawler] appid=2767030 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:42:07 INFO [steam_review_crawler] appid=1086940 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:42:21 INFO [steam_review_crawler] appid=1245620 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:42:35 INFO [steam_review_crawler] appid=289070 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:42:49 INFO [steam_review_crawler] appid=294100 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:43:03 INFO [steam_review_crawler] appid=227300 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:43:16 INFO [steam_review_crawler] appid=381210 collected=1000 termination=max_reviews_per_app
+2026-05-26 16:43:22 INFO [steam_review_crawler] saved parquet: rows=14763 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.parquet
+2026-05-26 16:43:22 INFO [steam_review_crawler] saved csv: rows=14763 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.csv
+2026-05-26 16:43:22 INFO [steam_review_crawler] saved parquet: rows=15 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.parquet
+2026-05-26 16:43:22 INFO [steam_review_crawler] saved csv: rows=15 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.csv
+2026-05-26 16:43:22 INFO [steam_review_crawler] saved parquet: rows=15 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.parquet
+2026-05-26 16:43:22 INFO [steam_review_crawler] saved csv: rows=15 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.csv
+2026-05-26 16:43:22 INFO [steam_review_crawler] saved failed appids csv: rows=0 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\logs\failed_appids.csv
+2026-05-26 16:43:22 INFO [steam_review_crawler] collection complete
+2026-05-26 16:43:22 INFO [steam_review_crawler] reviews_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.parquet
+2026-05-26 16:43:22 INFO [steam_review_crawler] summary_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.parquet
+2026-05-26 16:43:22 INFO [steam_review_crawler] metadata_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.parquet
+2026-05-26 16:43:22 INFO [steam_review_crawler] failed_appids_csv: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\logs\failed_appids.csv
