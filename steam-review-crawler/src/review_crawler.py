@@ -300,6 +300,11 @@ def collect_reviews_for_app(
         if sleep_sec > 0:
             time.sleep(sleep_sec)
 
+    final_count = config.get("crawler", {}).get("final_reviews_per_app")
+    if final_count is not None and len(rows) > final_count:
+        rows.sort(key=lambda x: x.get("weighted_vote_score") or 0.0, reverse=True)
+        rows = rows[:final_count]
+
     summary = _summary_from_rows(
         appid=appid,
         game_name=game_name,

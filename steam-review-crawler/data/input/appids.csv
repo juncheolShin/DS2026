@@ -1,16 +1,101 @@
-appid,name,target_genre,priority
-730,Counter-Strike 2,tactical FPS esports,1
-570,Dota 2,MOBA,2
-578080,PUBG: BATTLEGROUNDS,battle royale,3
-2483190,Forza Horizon 6,racing open world,4
-2868840,Slay the Spire 2,roguelike deckbuilder,5
-252490,Rust,survival craft,6
-413150,Stardew Valley,farming life sim,7
-552990,World of Warships,naval combat MMO,8
-2767030,Marvel Rivals,hero shooter,9
-1086940,Baldur's Gate 3,CRPG story rich,10
-1245620,ELDEN RING,soulslike action RPG,11
-289070,Sid Meier's Civilization VI,4X strategy,12
-294100,RimWorld,colony sim,13
-227300,Euro Truck Simulator 2,driving sim,14
-381210,Dead by Daylight,asymmetric horror,15
+﻿appid,name,korean_reviews,korean_positive_percent
+3551410,"Football Manager 26 In-Game Editor",124,4.84
+2584990,"Shadowverse: Worlds Beyond",1623,21.93
+1295660,"Sid Meier's Civilization VII",1057,41.34
+1303182,"Crusader Kings III: Royal Court",100,44.00
+949230,"Cities: Skylines II",1921,55.75
+1601580,"Frostpunk 2",811,58.57
+1658280,"Eiyuden Chronicle: Hundred Heroes",129,60.47
+645402,"Sid Meier’s Civilization® VI: Rise and Fall",137,62.04
+3556750,"Warhammer 40,000: Dawn of War - Definitive Edition",156,65.38
+313120,"Stranded Deep",514,66.93
+1465460,"Infection Free Zone",514,68.09
+4286550,"Keep on Mining! - Worlds",106,68.87
+2824490,"He is Coming",130,69.23
+1392840,"RimWorld - Ideology",154,70.13
+578080,"PUBG: BATTLEGROUNDS",146781,71.49
+3274580,"Anno 117: Pax Romana",221,72.40
+1017900,"Age of Empires: Definitive Edition",335,73.13
+550650,"Black Squad",3742,73.49
+625960,"Stoneshard",1024,73.73
+356190,"Middle-earth™: Shadow of War™",1798,74.25
+641990,"The Escapists 2",241,74.69
+2503740,"Storm Striker",425,74.82
+505460,"Foxhole",285,75.09
+2141910,"Magic: The Gathering Arena",130,75.38
+393380,"Squad",1117,75.65
+570,"Dota 2",5167,76.12
+2772750,"Age of History 3",195,76.41
+466560,"Northgard: Definitive Edition",867,76.82
+559650,"Witch It",220,77.73
+368500,"Assassin's Creed® Syndicate",1210,78.10
+2739990,"Mahjong Soul",1042,78.69
+1850510,"TRIANGLE STRATEGY",289,79.24
+730,"Counter-Strike 2",25688,80.17
+921570,"OCTOPATH TRAVELER™",1007,80.54
+1611910,"Warhammer 40,000: Chaos Gate - Daemonhunters",243,81.07
+107410,"Arma 3",2894,81.24
+1468720,"Ultimate Epic Battle Simulator 2",143,81.82
+1149640,"RimWorld - Royalty",114,82.46
+1150440,"Aliens: Dark Descent",510,82.94
+368260,"Marvel's Midnight Suns",702,83.33
+3014320,"OCTOPATH TRAVELER 0",289,83.74
+2617700,"Tinkerlands",324,83.95
+2620240,"Spectral Scream",351,84.33
+518790,"theHunter: Call of the Wild™",2658,84.65
+780290,"Gloomhaven",226,84.96
+431240,"Golf With Your Friends",190,85.26
+1029780,"Going Medieval",445,85.39
+1466860,"Age of Empires IV: Anniversary Edition",1219,85.73
+251570,"7 Days to Die",3861,86.22
+1669000,"Age of Wonders 4",533,86.30
+1948980,"Hero's Adventure: Road to Passion",189,86.77
+233450,"Prison Architect",1196,87.04
+2356780,"Dungeon Clawler",141,87.23
+1522820,"Orcs Must Die! 3",412,87.38
+2868840,"Slay the Spire 2",4018,87.76
+3314790,"CloverPit",1513,87.97
+394360,"Hearts of Iron IV",7419,88.42
+1372810,"Teamfight Manager",2367,88.55
+2432860,"MENACE",205,88.78
+2239710,"Into the Dead: Our Darkest Days",662,89.12
+977400,"Cell to Singularity - Evolution Never Ends",355,89.30
+233860,"Kenshi",1561,89.62
+437920,"Tricky Towers",1461,89.94
+3035500,"Fantasy Map Simulator",176,90.34
+3052450,"Morimens",198,90.40
+1455840,"Dorfromantik",329,90.58
+223750,"DCS World Steam Edition",551,90.74
+3694480,"A Game About Feeding A Black Hole",198,90.91
+2679460,"Metaphor: ReFantazio",1518,91.04
+2871390,"Poly TD",349,91.12
+2870920,"Restaurats",104,91.35
+3590,"Plants vs. Zombies GOTY Edition",887,92.22
+1545560,"Shadow Gambit: The Cursed Crew",228,92.54
+962400,"Granny",138,92.75
+2384580,"DYNASTY WARRIORS: ORIGINS",1486,93.07
+1525700,"Tavern Master",758,93.27
+2753900,"The King is Watching",166,93.37
+322330,"Don't Starve Together",12826,93.40
+2489330,"Whiskerwood",112,93.75
+2742830,"Monster Train 2",173,94.22
+453090,"Parkitect",443,94.36
+2427700,"Backpack Battles",345,94.49
+1062090,"Timberborn",762,94.62
+1599600,"PlateUp!",524,94.85
+287980,"Mini Metro",662,95.02
+282070,"This War of Mine",3938,95.20
+2162800,"shapez 2 - Factory",254,95.28
+960090,"Bloons TD 6",1850,95.51
+220200,"Kerbal Space Program",1073,95.62
+8930,"Sid Meier's Civilization® V",8880,95.70
+1862520,"Just Go",387,95.87
+341800,"Keep Talking and Nobody Explodes",383,96.08
+1669980,"Volcano Princess",990,96.26
+526870,"Satisfactory",3900,96.79
+1826140,"RimWorld - Biotech",130,96.92
+2097570,"StarVaders",180,97.78
+294100,"RimWorld",8052,98.09
+646570,"Slay the Spire",10097,98.20
+645390,"Factorio: Space Age",129,98.45
+1260520,"Patrick's Parabox",163,99.39

@@ -17,7 +17,8 @@ crawler:
   purchase_type: all
   num_per_page: 100
   filter_offtopic_activity: 1
-  max_reviews_per_app: 1000
+  max_reviews_per_app: 150
+  final_reviews_per_app: 100
   max_failures: 3
   sleep_sec: 1.0
   timeout_sec: 20

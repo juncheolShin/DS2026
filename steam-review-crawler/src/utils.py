@@ -85,6 +85,16 @@ def setup_logger(config: Mapping[str, Any]) -> logging.Logger:
     return logger
 
 
+class TLSAdapter(requests.adapters.HTTPAdapter):
+    def init_poolmanager(self, *args, **kwargs):
+        import ssl
+        ctx = ssl.create_default_context()
+        ctx.minimum_version = ssl.TLSVersion.TLSv1_2
+        ctx.maximum_version = ssl.TLSVersion.TLSv1_3
+        kwargs['ssl_context'] = ctx
+        return super(TLSAdapter, self).init_poolmanager(*args, **kwargs)
+
+
 def requests_session(config: Mapping[str, Any]) -> requests.Session:
     session = requests.Session()
     user_agent = (
@@ -92,6 +102,7 @@ def requests_session(config: Mapping[str, Any]) -> requests.Session:
         or "steam-review-crawler/0.1 (academic data science project)"
     )
     session.headers.update({"User-Agent": user_agent})
+    session.mount("https://", TLSAdapter())
     return session
 
 

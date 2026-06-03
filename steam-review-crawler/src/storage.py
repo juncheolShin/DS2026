@@ -56,6 +56,13 @@ def save_outputs(
     save_parquet = bool(output.get("save_parquet", True))
     paths = config.get("paths", {})
 
+    if not reviews_df.empty:
+        reviews_df = reviews_df.assign(
+            _temp_score=reviews_df["weighted_vote_score"].fillna(0.0)
+        ).sort_values(
+            by=["appid", "_temp_score"], ascending=[True, False]
+        ).drop(columns=["_temp_score"]).reset_index(drop=True)
+
     reviews_df = _ordered_frame(reviews_df, REVIEW_COLUMNS)
     summary_df = _ordered_frame(summary_df, SUMMARY_COLUMNS)
     metadata_df = _ordered_frame(metadata_df, METADATA_COLUMNS)
