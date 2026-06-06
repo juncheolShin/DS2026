@@ -87,12 +87,31 @@ def validate_dataset(
         print(f"summary path: {summary_path}")
         print(f"summary rows: {len(summary):,}")
         if {"appid", "total_reviews_api", "collected_reviews_count"}.issubset(summary.columns):
-            compare = summary[["appid", "total_reviews_api", "collected_reviews_count"]].copy()
+            summary_columns = [
+                column
+                for column in [
+                    "appid",
+                    "total_reviews_api",
+                    "total_positive_api",
+                    "total_negative_api",
+                    "overall_positive_review_percent",
+                    "review_score_desc",
+                    "collected_reviews_count",
+                    "positive_collected_ratio",
+                    "rating_source",
+                    "rating_language",
+                ]
+                if column in summary.columns
+            ]
+            compare = summary[summary_columns].copy()
             compare["collection_ratio"] = compare["collected_reviews_count"] / compare[
                 "total_reviews_api"
             ].replace({0: pd.NA})
-            print("total_reviews_api vs collected_reviews_count:")
+            print("overall rating summary:")
             print(compare.to_string(index=False))
+            if "overall_positive_review_ratio" in summary.columns:
+                missing = summary["overall_positive_review_ratio"].isna().sum()
+                print(f"overall_positive_review_ratio missing count: {missing:,}")
         print()
 
     if failed_path:

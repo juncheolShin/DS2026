@@ -22,6 +22,7 @@ pip install -r requirements.txt
 - `crawler.sleep_sec`: 페이지 요청 사이 대기 시간입니다.
 - `crawler.max_failures`: 한 appid에서 연속 실패가 이 값을 초과하면 수집을 종료합니다.
 - `crawler.retry.status_forcelist`: `429, 500, 502, 503, 504`가 retry 대상입니다. `403`은 즉시 중단됩니다.
+- `overall_rating`: Steam 전체 리뷰 기준 평점을 얻기 위한 별도 요약 요청 설정입니다. 기본값은 `filter=all`, `language=all`, `num_per_page=0`입니다.
 - `metadata.enabled`: Steam appdetails 메타데이터 수집 여부입니다. 실패해도 리뷰 수집은 계속 진행됩니다.
 - `output.save_csv`, `output.save_parquet`: CSV와 Parquet 저장 여부입니다.
 
@@ -75,9 +76,12 @@ python src/validate_dataset.py --reviews data/raw/reviews_raw.parquet
 
 - `appid`, `game_name`
 - `total_reviews_api`, `total_positive_api`, `total_negative_api`
+- `overall_positive_review_ratio`, `overall_positive_review_percent`: Steam 전체 리뷰 중 긍정 리뷰 비율입니다.
 - `review_score`, `review_score_desc`
 - `collected_reviews_count`, `positive_collected_count`, `negative_collected_count`
+- `positive_collected_ratio`: 실제 수집한 리뷰 표본의 긍정 비율입니다.
 - `first_review_time`, `last_review_time`, `crawled_at`
+- `rating_source`, `rating_language`: 전체 평점 산출에 사용한 API 설정입니다.
 - `termination_reason`: `no_reviews`, `max_reviews_per_app`, `cursor_loop`, `max_failures`, `http_403` 등
 
 `app_metadata`는 게임 1개가 1행입니다.
@@ -97,7 +101,7 @@ python src/validate_dataset.py --reviews data/raw/reviews_raw.parquet
 - 기본 파라미터는 `filter=recent`, `language=koreana`, `review_type=all`, `purchase_type=all`, `num_per_page=100`, `filter_offtopic_activity=1`입니다.
 - 한 appid 수집은 리뷰 배열이 비거나, 최대 수집 수에 도달하거나, 같은 cursor가 반복되거나, 연속 실패가 `max_failures`를 초과하면 종료됩니다.
 - Steam 공식 리뷰 API는 판매량을 직접 제공하지 않습니다. 따라서 판매량 분석에는 `total_reviews_api`, `total_positive_api`, `total_negative_api` 같은 리뷰 수 지표를 proxy로 사용하는 한계가 있습니다.
-- `filter=recent` 응답에서 진짜 전체 리뷰 수인 `total_reviews`가 제공되지 않는 경우 `total_reviews_api`는 비워 둡니다. 이때 실제 확보한 리뷰 수는 `collected_reviews_count`를 기준으로 확인합니다.
+- 전체 평점은 리뷰 수집용 요청과 분리해 `filter=all`, `language=all`, `num_per_page=0`으로 가져옵니다. `overall_positive_review_ratio = total_positive_api / total_reviews_api`입니다.
 - `appdetails` endpoint는 Steamworks 공식 Web API 문서화 범위가 제한적이므로 실패할 수 있습니다. 이 경우 `metadata_source="failed"`로 저장하고 리뷰 수집은 계속합니다.
 
 ## ABSA 분석에서 활용할 수 있는 컬럼
@@ -110,6 +114,7 @@ python src/validate_dataset.py --reviews data/raw/reviews_raw.parquet
 - `release_date`: 너무 오래된 게임을 제외하거나 출시 후 경과 기간을 통제할 때 사용합니다.
 - `genres`, `categories`, `price_overview`, `metacritic_score`: 게임 단위 통제 변수로 사용할 수 있습니다.
 - `total_reviews_api`, `review_score`, `review_score_desc`: Steam 리뷰 API가 제공하는 게임 단위 평판 지표입니다.
+- `overall_positive_review_ratio`, `overall_positive_review_percent`: ABSA로 집계한 속성별 감성과 비교할 게임 단위 전체 평점 타깃입니다.
 
 ## 검증
 

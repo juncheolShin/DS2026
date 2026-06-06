@@ -31,6 +31,24 @@ crawler:
     jitter_sec: 0.25
     status_forcelist: [429, 500, 502, 503, 504]
 
+overall_rating:
+  enabled: true
+  filter: all
+  language: all
+  review_type: all
+  purchase_type: all
+  num_per_page: 0
+  cursor: "*"
+  filter_offtopic_activity: 1
+  timeout_sec: 20
+  retry:
+    max_attempts: 5
+    backoff_initial_sec: 1.0
+    backoff_multiplier: 2.0
+    backoff_max_sec: 30.0
+    jitter_sec: 0.25
+    status_forcelist: [429, 500, 502, 503, 504]
+
 test_mode:
   max_reviews_per_app: 200
 

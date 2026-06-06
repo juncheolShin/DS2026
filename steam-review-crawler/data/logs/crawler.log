@@ -206,3 +206,119 @@
 2026-06-03 16:27:37 INFO [steam_review_crawler] summary_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.parquet
 2026-06-03 16:27:37 INFO [steam_review_crawler] metadata_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.parquet
 2026-06-03 16:27:37 INFO [steam_review_crawler] failed_appids_csv: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\logs\failed_appids.csv
+2026-06-06 19:50:20 INFO [steam_review_crawler] loading target appids
+2026-06-06 19:50:20 INFO [steam_review_crawler] loaded 100 target appids
+2026-06-06 19:50:20 INFO [steam_review_crawler] review language=koreana filter=recent max_reviews_per_app=150
+2026-06-06 19:52:16 INFO [steam_review_crawler] appid=3551410 collected=100 termination=no_reviews
+2026-06-06 19:52:19 INFO [steam_review_crawler] appid=2584990 collected=100 termination=max_reviews_per_app
+2026-06-06 19:52:21 INFO [steam_review_crawler] appid=1295660 collected=100 termination=max_reviews_per_app
+2026-06-06 19:52:22 INFO [steam_review_crawler] appid=1303182 collected=100 termination=no_reviews
+2026-06-06 19:52:25 INFO [steam_review_crawler] appid=949230 collected=100 termination=max_reviews_per_app
+2026-06-06 19:52:28 INFO [steam_review_crawler] appid=1601580 collected=100 termination=max_reviews_per_app
+2026-06-06 19:52:32 INFO [steam_review_crawler] appid=1658280 collected=100 termination=no_reviews
+2026-06-06 19:52:36 INFO [steam_review_crawler] appid=645402 collected=100 termination=no_reviews
+2026-06-06 19:52:39 INFO [steam_review_crawler] appid=3556750 collected=100 termination=max_reviews_per_app
+2026-06-06 19:52:42 INFO [steam_review_crawler] appid=313120 collected=100 termination=max_reviews_per_app
+2026-06-06 19:52:45 INFO [steam_review_crawler] appid=1465460 collected=100 termination=max_reviews_per_app
+2026-06-06 19:52:49 INFO [steam_review_crawler] appid=4286550 collected=100 termination=no_reviews
+2026-06-06 19:52:53 INFO [steam_review_crawler] appid=2824490 collected=100 termination=no_reviews
+2026-06-06 19:52:55 INFO [steam_review_crawler] appid=1392840 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:00 INFO [steam_review_crawler] appid=578080 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:02 INFO [steam_review_crawler] appid=3274580 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:04 INFO [steam_review_crawler] appid=1017900 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:06 INFO [steam_review_crawler] appid=550650 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:08 INFO [steam_review_crawler] appid=625960 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:10 INFO [steam_review_crawler] appid=356190 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:13 INFO [steam_review_crawler] appid=641990 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:14 INFO [steam_review_crawler] appid=2503740 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:16 INFO [steam_review_crawler] appid=505460 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:20 INFO [steam_review_crawler] appid=2141910 collected=100 termination=no_reviews
+2026-06-06 19:53:22 INFO [steam_review_crawler] appid=393380 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:24 INFO [steam_review_crawler] appid=570 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:27 INFO [steam_review_crawler] appid=2772750 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:30 INFO [steam_review_crawler] appid=466560 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:32 INFO [steam_review_crawler] appid=559650 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:33 INFO [steam_review_crawler] appid=368500 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:35 INFO [steam_review_crawler] appid=2739990 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:38 INFO [steam_review_crawler] appid=1850510 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:39 INFO [steam_review_crawler] appid=730 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:42 INFO [steam_review_crawler] appid=921570 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:45 INFO [steam_review_crawler] appid=1611910 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:47 INFO [steam_review_crawler] appid=107410 collected=100 termination=max_reviews_per_app
+2026-06-06 19:53:51 INFO [steam_review_crawler] appid=1468720 collected=100 termination=no_reviews
+2026-06-06 19:53:55 INFO [steam_review_crawler] appid=1149640 collected=100 termination=no_reviews
+2026-06-06 19:54:00 INFO [steam_review_crawler] appid=1150440 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:02 INFO [steam_review_crawler] appid=368260 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:07 INFO [steam_review_crawler] appid=3014320 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:09 INFO [steam_review_crawler] appid=2617700 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:13 INFO [steam_review_crawler] appid=2620240 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:15 INFO [steam_review_crawler] appid=518790 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:18 INFO [steam_review_crawler] appid=780290 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:20 INFO [steam_review_crawler] appid=431240 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:23 INFO [steam_review_crawler] appid=1029780 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:25 INFO [steam_review_crawler] appid=1466860 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:28 INFO [steam_review_crawler] appid=251570 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:32 INFO [steam_review_crawler] appid=1669000 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:36 INFO [steam_review_crawler] appid=1948980 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:40 INFO [steam_review_crawler] appid=233450 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:48 INFO [steam_review_crawler] appid=2356780 collected=100 termination=no_reviews
+2026-06-06 19:54:51 INFO [steam_review_crawler] appid=1522820 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:54 INFO [steam_review_crawler] appid=2868840 collected=100 termination=max_reviews_per_app
+2026-06-06 19:54:56 INFO [steam_review_crawler] appid=3314790 collected=100 termination=max_reviews_per_app
+2026-06-06 19:55:00 INFO [steam_review_crawler] appid=394360 collected=100 termination=max_reviews_per_app
+2026-06-06 19:55:04 INFO [steam_review_crawler] appid=1372810 collected=100 termination=max_reviews_per_app
+2026-06-06 19:55:07 INFO [steam_review_crawler] appid=2432860 collected=100 termination=max_reviews_per_app
+2026-06-06 19:55:10 INFO [steam_review_crawler] appid=2239710 collected=100 termination=max_reviews_per_app
+2026-06-06 19:55:13 INFO [steam_review_crawler] appid=977400 collected=100 termination=max_reviews_per_app
+2026-06-06 19:55:45 WARNING [steam_review_crawler] reviews appid=233860 request error on attempt 1/5: HTTPSConnectionPool(host='store.steampowered.com', port=443): Read timed out.; sleeping 1.02s
+2026-06-06 19:56:17 INFO [steam_review_crawler] appid=233860 collected=100 termination=max_reviews_per_app
+2026-06-06 19:56:20 INFO [steam_review_crawler] appid=437920 collected=100 termination=max_reviews_per_app
+2026-06-06 19:56:23 INFO [steam_review_crawler] appid=3035500 collected=100 termination=max_reviews_per_app
+2026-06-06 19:56:30 INFO [steam_review_crawler] appid=3052450 collected=100 termination=max_reviews_per_app
+2026-06-06 19:56:33 INFO [steam_review_crawler] appid=1455840 collected=100 termination=max_reviews_per_app
+2026-06-06 19:56:36 INFO [steam_review_crawler] appid=223750 collected=100 termination=max_reviews_per_app
+2026-06-06 19:56:44 INFO [steam_review_crawler] appid=3694480 collected=100 termination=max_reviews_per_app
+2026-06-06 19:56:48 INFO [steam_review_crawler] appid=2679460 collected=100 termination=max_reviews_per_app
+2026-06-06 19:56:50 INFO [steam_review_crawler] appid=2871390 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:01 INFO [steam_review_crawler] appid=2870920 collected=100 termination=no_reviews
+2026-06-06 19:57:04 INFO [steam_review_crawler] appid=3590 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:07 INFO [steam_review_crawler] appid=1545560 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:10 INFO [steam_review_crawler] appid=962400 collected=100 termination=no_reviews
+2026-06-06 19:57:13 INFO [steam_review_crawler] appid=2384580 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:15 INFO [steam_review_crawler] appid=1525700 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:18 INFO [steam_review_crawler] appid=2753900 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:20 INFO [steam_review_crawler] appid=322330 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:24 INFO [steam_review_crawler] appid=2489330 collected=100 termination=no_reviews
+2026-06-06 19:57:27 INFO [steam_review_crawler] appid=2742830 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:30 INFO [steam_review_crawler] appid=453090 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:33 INFO [steam_review_crawler] appid=2427700 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:36 INFO [steam_review_crawler] appid=1062090 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:38 INFO [steam_review_crawler] appid=1599600 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:42 INFO [steam_review_crawler] appid=287980 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:46 INFO [steam_review_crawler] appid=282070 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:49 INFO [steam_review_crawler] appid=2162800 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:54 INFO [steam_review_crawler] appid=960090 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:56 INFO [steam_review_crawler] appid=220200 collected=100 termination=max_reviews_per_app
+2026-06-06 19:57:59 INFO [steam_review_crawler] appid=8930 collected=100 termination=max_reviews_per_app
+2026-06-06 19:58:03 INFO [steam_review_crawler] appid=1862520 collected=100 termination=max_reviews_per_app
+2026-06-06 19:58:06 INFO [steam_review_crawler] appid=341800 collected=100 termination=max_reviews_per_app
+2026-06-06 19:58:08 INFO [steam_review_crawler] appid=1669980 collected=100 termination=max_reviews_per_app
+2026-06-06 19:58:10 INFO [steam_review_crawler] appid=526870 collected=100 termination=max_reviews_per_app
+2026-06-06 19:58:13 INFO [steam_review_crawler] appid=1826140 collected=100 termination=no_reviews
+2026-06-06 19:58:16 INFO [steam_review_crawler] appid=2097570 collected=100 termination=max_reviews_per_app
+2026-06-06 19:58:18 INFO [steam_review_crawler] appid=294100 collected=100 termination=max_reviews_per_app
+2026-06-06 19:58:20 INFO [steam_review_crawler] appid=646570 collected=100 termination=max_reviews_per_app
+2026-06-06 19:58:23 INFO [steam_review_crawler] appid=645390 collected=100 termination=no_reviews
+2026-06-06 19:58:25 INFO [steam_review_crawler] appid=1260520 collected=100 termination=max_reviews_per_app
+2026-06-06 19:58:30 INFO [steam_review_crawler] saved parquet: rows=10000 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.parquet
+2026-06-06 19:58:31 INFO [steam_review_crawler] saved csv: rows=10000 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.csv
+2026-06-06 19:58:31 INFO [steam_review_crawler] saved parquet: rows=100 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.parquet
+2026-06-06 19:58:31 INFO [steam_review_crawler] saved csv: rows=100 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.csv
+2026-06-06 19:58:31 INFO [steam_review_crawler] saved parquet: rows=100 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.parquet
+2026-06-06 19:58:31 INFO [steam_review_crawler] saved csv: rows=100 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.csv
+2026-06-06 19:58:31 INFO [steam_review_crawler] saved failed appids csv: rows=0 path=G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\logs\failed_appids.csv
+2026-06-06 19:58:31 INFO [steam_review_crawler] collection complete
+2026-06-06 19:58:31 INFO [steam_review_crawler] reviews_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\reviews_raw.parquet
+2026-06-06 19:58:31 INFO [steam_review_crawler] summary_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\review_summary_by_app.parquet
+2026-06-06 19:58:31 INFO [steam_review_crawler] metadata_parquet: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\raw\app_metadata.parquet
+2026-06-06 19:58:31 INFO [steam_review_crawler] failed_appids_csv: G:\내 드라이브\수업자료\2026-1\Data Science\ds_project\steam-review-crawler\data\logs\failed_appids.csv

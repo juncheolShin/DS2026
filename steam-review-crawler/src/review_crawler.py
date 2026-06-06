@@ -54,14 +54,19 @@ SUMMARY_COLUMNS = [
     "total_reviews_api",
     "total_positive_api",
     "total_negative_api",
+    "overall_positive_review_ratio",
+    "overall_positive_review_percent",
     "review_score",
     "review_score_desc",
     "collected_reviews_count",
     "positive_collected_count",
     "negative_collected_count",
+    "positive_collected_ratio",
     "first_review_time",
     "last_review_time",
     "crawled_at",
+    "rating_source",
+    "rating_language",
     "termination_reason",
 ]
 
@@ -90,6 +95,49 @@ def _review_params(config: dict[str, Any], cursor: str, remaining: int) -> dict[
         "cursor": cursor,
         "filter_offtopic_activity": crawler_config.get("filter_offtopic_activity", 1),
     }
+
+
+def _overall_rating_params(config: dict[str, Any]) -> dict[str, Any]:
+    rating_config = config.get("overall_rating", {})
+    return {
+        "json": 1,
+        "filter": rating_config.get("filter", "all"),
+        "language": rating_config.get("language", "all"),
+        "review_type": rating_config.get("review_type", "all"),
+        "purchase_type": rating_config.get("purchase_type", "all"),
+        "num_per_page": int(rating_config.get("num_per_page", 0)),
+        "cursor": rating_config.get("cursor", "*"),
+        "filter_offtopic_activity": rating_config.get("filter_offtopic_activity", 1),
+    }
+
+
+def _fetch_overall_query_summary(
+    *,
+    appid: int,
+    url: str,
+    config: dict[str, Any],
+    session: requests.Session,
+    logger: logging.Logger | None = None,
+) -> dict[str, Any]:
+    rating_config = config.get("overall_rating", {})
+    if not rating_config.get("enabled", True):
+        return {}
+
+    try:
+        payload = request_json_with_retry(
+            session,
+            url,
+            params=_overall_rating_params(config),
+            timeout_sec=float(rating_config.get("timeout_sec", config.get("crawler", {}).get("timeout_sec", 20))),
+            retry_config=rating_config.get("retry", config.get("crawler", {}).get("retry", {})),
+            logger=logger,
+            context=f"overall rating appid={appid}",
+        )
+        return payload.get("query_summary") or {}
+    except Exception as exc:
+        if logger:
+            logger.warning("overall rating summary failed for appid=%s: %s", appid, exc)
+        return {}
 
 
 def _normalize_review(
@@ -147,26 +195,47 @@ def _summary_from_rows(
     query_summary: dict[str, Any],
     crawled_at: str,
     termination_reason: str,
+    rating_source: str,
+    rating_language: str | None,
 ) -> dict[str, Any]:
     timestamps = [row["timestamp_created"] for row in rows if row.get("timestamp_created") is not None]
     voted_up_values = [row.get("voted_up") for row in rows]
     positive_count = sum(value is True for value in voted_up_values)
     negative_count = sum(value is False for value in voted_up_values)
+    collected_votes = positive_count + negative_count
+    positive_collected_ratio = positive_count / collected_votes if collected_votes else None
+    total_positive = coerce_int(query_summary.get("total_positive"))
+    total_negative = coerce_int(query_summary.get("total_negative"))
+    total_reviews = coerce_int(query_summary.get("total_reviews"))
+    if total_reviews is None and total_positive is not None and total_negative is not None:
+        total_reviews = total_positive + total_negative
+    overall_positive_ratio = (
+        total_positive / total_reviews
+        if total_positive is not None and total_reviews not in (None, 0)
+        else None
+    )
 
     return {
         "appid": appid,
         "game_name": game_name,
-        "total_reviews_api": coerce_int(query_summary.get("total_reviews")),
-        "total_positive_api": coerce_int(query_summary.get("total_positive")),
-        "total_negative_api": coerce_int(query_summary.get("total_negative")),
+        "total_reviews_api": total_reviews,
+        "total_positive_api": total_positive,
+        "total_negative_api": total_negative,
+        "overall_positive_review_ratio": overall_positive_ratio,
+        "overall_positive_review_percent": round(overall_positive_ratio * 100, 2)
+        if overall_positive_ratio is not None
+        else None,
         "review_score": coerce_int(query_summary.get("review_score")),
         "review_score_desc": query_summary.get("review_score_desc"),
         "collected_reviews_count": len(rows),
         "positive_collected_count": positive_count,
         "negative_collected_count": negative_count,
+        "positive_collected_ratio": positive_collected_ratio,
         "first_review_time": min(timestamps) if timestamps else None,
         "last_review_time": max(timestamps) if timestamps else None,
         "crawled_at": crawled_at,
+        "rating_source": rating_source,
+        "rating_language": rating_language,
         "termination_reason": termination_reason,
     }
 
@@ -197,6 +266,13 @@ def collect_reviews_for_app(
     consecutive_failures = 0
     termination_reason = "unknown"
     failure: dict[str, Any] | None = None
+    overall_query_summary = _fetch_overall_query_summary(
+        appid=appid,
+        url=url,
+        config=config,
+        session=session,
+        logger=logger,
+    )
 
     while len(rows) < max_reviews:
         if cursor in seen_cursors:
@@ -300,6 +376,14 @@ def collect_reviews_for_app(
         if sleep_sec > 0:
             time.sleep(sleep_sec)
 
+    summary_query = overall_query_summary or latest_query_summary
+    rating_source = "overall_rating_api" if overall_query_summary else "review_page_query_summary"
+    rating_language = (
+        config.get("overall_rating", {}).get("language")
+        if overall_query_summary
+        else config.get("crawler", {}).get("language")
+    )
+
     final_count = config.get("crawler", {}).get("final_reviews_per_app")
     if final_count is not None and len(rows) > final_count:
         rows.sort(key=lambda x: x.get("weighted_vote_score") or 0.0, reverse=True)
@@ -309,9 +393,11 @@ def collect_reviews_for_app(
         appid=appid,
         game_name=game_name,
         rows=rows,
-        query_summary=latest_query_summary,
+        query_summary=summary_query,
         crawled_at=crawled_at,
         termination_reason=termination_reason,
+        rating_source=rating_source,
+        rating_language=rating_language,
     )
     return rows, summary, failure
 
