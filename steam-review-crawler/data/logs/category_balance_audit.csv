@@ -1,0 +1,8 @@
+﻿tag_id,tag_name,eligible_count,active_bins,required_per_10_bins,can_make_300_equal_10_bins,max_equal_count_all_10_bins,max_equal_count_active_bins,bin_00-010,bin_10-020,bin_20-030,bin_30-040,bin_40-050,bin_50-060,bin_60-070,bin_70-080,bin_80-090,bin_90-100
+492,Indie,107,5,30,False,0,5,0,0,0,0,1,0,2,11,36,57
+113,Free To Play,87,7,30,False,0,14,0,0,0,3,2,4,13,23,22,20
+19,Action,191,7,30,False,0,14,0,0,0,2,3,5,29,40,54,58
+597,Casual,96,7,30,False,0,21,0,0,0,3,4,3,3,8,25,50
+21,Adventure,162,6,30,False,0,6,0,0,0,0,1,2,18,29,53,59
+599,Simulation,129,7,30,False,0,7,0,0,0,1,2,4,6,21,44,51
+122,RPG,152,7,30,False,0,7,0,0,0,1,2,3,19,26,46,55

@@ -23,6 +23,7 @@ pip install -r requirements.txt
 - `crawler.max_failures`: 한 appid에서 연속 실패가 이 값을 초과하면 수집을 종료합니다.
 - `crawler.retry.status_forcelist`: `429, 500, 502, 503, 504`가 retry 대상입니다. `403`은 즉시 중단됩니다.
 - `overall_rating`: Steam 전체 리뷰 기준 평점을 얻기 위한 별도 요약 요청 설정입니다. 기본값은 `filter=all`, `language=all`, `num_per_page=0`입니다.
+- `selection`: 전체 긍정률 구간이 균등하도록 appid를 선정하는 설정입니다. `strategy_tag_id: 9`이면 전략 태그 안에서, `null`이면 전체 게임에서 고릅니다. 기본값은 300개, 한국어 리뷰 최소 500개, bin 재배분 없음입니다.
 - `metadata.enabled`: Steam appdetails 메타데이터 수집 여부입니다. 실패해도 리뷰 수집은 계속 진행됩니다.
 - `output.save_csv`, `output.save_parquet`: CSV와 Parquet 저장 여부입니다.
 
@@ -47,6 +48,7 @@ appid,name,target_genre,priority
 python main.py --config config.yaml
 python main.py --config config.yaml --test-mode
 python main.py --config config.yaml --language all --max-reviews-per-app 500
+python select_strategy_games.py --config config.yaml
 python src/validate_dataset.py --reviews data/raw/reviews_raw.parquet
 ```
 

@@ -1,0 +1,8 @@
+﻿tag_id,tag_name,eligible_count,active_bins,required_per_score_bins,can_make_300_equal_score_bins,max_equal_count_all_score_bins,max_equal_count_active_bins,bin_Overwhelmingly_Negative,bin_Very_Negative,bin_Negative,bin_Mostly_Negative,bin_Mixed,bin_Mostly_Positive,bin_Positive,bin_Very_Positive,bin_Overwhelmingly_Positive
+492,Indie,149,4,33,False,0,16,0,0,0,0,4,13,0,61,71
+113,Free To Play,86,5,33,False,0,15,0,0,0,3,17,24,0,34,8
+19,Action,233,5,33,False,0,10,0,0,0,2,37,43,0,76,75
+597,Casual,118,5,33,False,0,15,0,0,0,3,10,8,0,52,45
+21,Adventure,203,4,33,False,0,84,0,0,0,0,21,33,0,74,75
+599,Simulation,145,5,33,False,0,5,0,0,0,1,12,21,0,63,48
+122,RPG,163,5,33,False,0,5,0,0,0,1,24,29,0,70,39

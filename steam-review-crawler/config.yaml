@@ -78,6 +78,32 @@ app_list:
     jitter_sec: 0.25
     status_forcelist: [429, 500, 502, 503, 504]
 
+selection:
+  target_count: 300
+  strategy_tag_id: null
+  games_category_id: 998
+  max_search_results: 3000
+  search_page_size: 100
+  sort_by: Reviews_DESC
+  sort_by_list: [Reviews_ASC, Reviews_DESC, _ASC]
+  min_global_reviews: 300
+  min_korean_reviews: 500
+  bin_mode: steam_score
+  rating_bin_width: 10
+  max_candidates_per_bin_check: 600
+  allow_bin_redistribution: true
+  quota_over_active_bins: true
+  require_target_count: true
+  sleep_sec: 0.15
+  search_sleep_sec: 1.5
+  rate_limit_sleep_sec: 45.0
+  search_timeout_sec: 30
+  review_timeout_sec: 20
+  output_appids_csv: data/input/appids.csv
+  candidates_csv: data/logs/strategy_candidates.csv
+  selected_csv: data/logs/strategy_selected_games.csv
+  backup_existing_appids: true
+
 output:
   save_csv: true
   save_parquet: true
