@@ -36,6 +36,7 @@ DEFAULT_TAGS = [
     (1664, "Puzzle"),
     (1774, "Shooter"),
     (1667, "Horror"),
+    (4106, "Action-Adventure"),
     (1695, "Open World"),
     (1662, "Survival"),
     (3810, "Sandbox"),

@@ -1,0 +1,2 @@
+﻿tag_id,tag_name,eligible_count,active_bins,required_per_score_bins,can_make_300_equal_score_bins,max_equal_count_all_score_bins,max_equal_count_active_bins,bin_Overwhelmingly_Negative,bin_Very_Negative,bin_Negative,bin_Mostly_Negative,bin_Mixed,bin_Mostly_Positive,bin_Positive,bin_Very_Positive,bin_Overwhelmingly_Positive
+9,Strategy,210,5,33,False,0,10,0,0,0,2,19,40,0,87,62

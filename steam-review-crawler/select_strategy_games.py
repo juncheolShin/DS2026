@@ -67,6 +67,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--target-count", type=int, help="Override selection.target_count.")
     parser.add_argument("--min-korean-reviews", type=int, help="Override selection.min_korean_reviews.")
     parser.add_argument("--max-results", type=int, help="Override selection.max_search_results.")
+    parser.add_argument("--tag-id", type=int, help="Override selection.strategy_tag_id.")
     return parser.parse_args()
 
 
@@ -104,6 +105,8 @@ def selection_config(config: dict[str, Any], args: argparse.Namespace) -> dict[s
         merged["min_korean_reviews"] = args.min_korean_reviews
     if args.max_results is not None:
         merged["max_search_results"] = args.max_results
+    if args.tag_id is not None:
+        merged["strategy_tag_id"] = args.tag_id
     return merged
 
 
